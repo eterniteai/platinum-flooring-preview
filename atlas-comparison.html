@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platinum Flooring — Atlas Index™ · Today vs 2.0</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="brand/platinum-mark.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14181f;--gold:#c9a14a;--gold-2:#e0bc6a;--paper:#f6f5f2;--muted:#5c6470;--red:#c0392b;--green:#2e7d4f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+.wrap{max-width:880px;width:100%}
+h1{font-family:'Sora';font-size:clamp(1.5rem,3.5vw,2.3rem);text-align:center}
+h1 span{background:linear-gradient(120deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{text-align:center;color:rgba(255,255,255,.6);margin:.6rem 0 2.5rem;font-size:.95rem}
+.grid{display:grid;grid-template-columns:1fr auto 1fr;gap:1.5rem;align-items:stretch}
+.card{background:#1c222c;border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2rem;text-align:center}
+.card h2{font-family:'Sora';font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.score{font-family:'Sora';font-weight:800;font-size:4rem;margin:.8rem 0 .2rem}
+.score.bad{color:var(--red)}.score.good{color:var(--gold-2)}
+.tier{display:inline-block;border-radius:999px;padding:.35rem 1.1rem;font-weight:700;font-size:.85rem;margin-top:.4rem}
+.tier.bronze{background:rgba(176,112,57,.18);color:#d49a6a;border:1px solid rgba(176,112,57,.5)}
+.tier.plat{background:rgba(201,161,74,.15);color:var(--gold-2);border:1px solid rgba(201,161,74,.5)}
+.arrow{display:flex;align-items:center;font-size:2.2rem;color:var(--gold-2)}
+ul{list-style:none;text-align:left;margin-top:1.4rem;font-size:.88rem;color:rgba(255,255,255,.75)}
+li{padding:.35rem 0;display:flex;gap:.55rem;align-items:flex-start}
+li b{flex:none}
+.bad-li b{color:var(--red)}.good-li b{color:#6fbf8a}
+.note{text-align:center;color:rgba(255,255,255,.45);font-size:.78rem;margin-top:2.2rem}
+.cta{text-align:center;margin-top:1.6rem}
+.cta a{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--ink);font-weight:700;padding:.85rem 1.8rem;border-radius:999px;text-decoration:none}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.arrow{justify-content:center;transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Atlas Index™ — Today vs <span>Platinum 2.0</span></h1>
+  <p class="sub">Independent 100-point website health audit · run June 9, 2026 · www.platinumflooringmd.com</p>
+  <div class="grid">
+    <div class="card">
+      <h2>Current Website</h2>
+      <div class="score bad">58.7</div>
+      <div class="tier bronze">Bronze Tier · Grade D</div>
+      <ul>
+        <li class="bad-li"><b>✗</b> Slow mobile load (6.6s vs 2.5s target)</li>
+        <li class="bad-li"><b>✗</b> Invisible to social shares (no preview card)</li>
+        <li class="bad-li"><b>✗</b> Weak trust signals (no warranty/licensed/FAQ)</li>
+        <li class="bad-li"><b>✗</b> Phone number inconsistency confusing Google</li>
+        <li class="bad-li"><b>✗</b> Missing AI-search readiness (ChatGPT/Claude/Perplexity)</li>
+        <li class="bad-li"><b>✗</b> No click-to-call, no map data, no review markup</li>
+      </ul>
+    </div>
+    <div class="arrow">→</div>
+    <div class="card">
+      <h2>Platinum 2.0 (this preview)</h2>
+      <div class="score good">90+</div>
+      <div class="tier plat">Platinum Tier · projected</div>
+      <ul>
+        <li class="good-li"><b>✓</b> Fast-loading, mobile-first redesign</li>
+        <li class="good-li"><b>✓</b> Rich previews on Facebook, iMessage, Google</li>
+        <li class="good-li"><b>✓</b> Licensed · insured · warranty · FAQ — front and center</li>
+        <li class="good-li"><b>✓</b> One consistent phone, click-to-call everywhere</li>
+        <li class="good-li"><b>✓</b> AI-search ready (ChatGPT, Claude, Perplexity)</li>
+        <li class="good-li"><b>✓</b> Full local-business map data for Google Maps ranking</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cta"><a href="index.html">View the 2.0 Preview →</a></div>
+  <p class="note">Atlas Index™ scoring methodology is proprietary and confidential. Projected score assumes deployment on modern edge hosting.</p>
+</div>
+</body>
+</html>

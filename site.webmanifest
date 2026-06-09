@@ -1,0 +1,9 @@
+{
+  "name": "Platinum Flooring LLC",
+  "short_name": "Platinum Flooring",
+  "icons": [{ "src": "brand/platinum-mark.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#14181f",
+  "background_color": "#f6f5f2",
+  "display": "standalone",
+  "start_url": "/"
+}
