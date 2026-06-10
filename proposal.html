@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proposal — Platinum Flooring Website 2.0</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="brand/platinum-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#CC0000;--red-deep:#8e0000;--red-soft:#fff5f5;
+  --ink:#100a0a;--ink-2:#1b1414;--coffee:#3c3535;
+  --silver:#BCBDC0;--silver-2:#e7e8eb;
+  --ivory:#fbfbfc;--ivory-2:#f2f2f4;
+  --text:#1f1c1c;--muted:#646066;--line:rgba(16,10,10,.12);
+  --green-ok:#2e7d4f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--text);background:var(--ivory);line-height:1.6}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);line-height:1.12;font-weight:600}
+.wrap{width:min(960px,92%);margin-inline:auto}
+.topnav{position:sticky;top:0;z-index:20;background:rgba(251,251,252,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topnav .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{height:42px;width:auto}
+.brand b{font-family:'Playfair Display';font-size:1.1rem;color:var(--ink)}
+.topnav .sign-link{background:var(--red);color:#fff;font-weight:700;font-size:.85rem;padding:.55rem 1.2rem;border-radius:0;letter-spacing:.08em;text-transform:uppercase}
+.hero{background:var(--ink);color:#fff;padding:54px 0;border-bottom:4px solid var(--red)}
+.hero .tag{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--red);font-weight:700;display:inline-flex;align-items:center;gap:.6rem}
+.hero .tag::before{content:"";width:26px;height:1.5px;background:var(--red)}
+.hero h1{color:#fff;font-size:clamp(2rem,5vw,3rem);margin:1rem 0 .9rem}
+.hero h1 em{font-style:italic;color:var(--silver)}
+.hero p{color:rgba(255,255,255,.82);max-width:640px}
+.hero .meta{display:flex;gap:30px;flex-wrap:wrap;margin-top:24px;font-size:.85rem;color:rgba(255,255,255,.6)}
+.hero .meta b{color:#fff;font-weight:600;display:block;font-size:.98rem;font-family:'Playfair Display'}
+.sec{padding:54px 0}
+.sec-t{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red-deep);font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.sec-t::before{content:"";width:24px;height:1.5px;background:var(--red)}
+.lead{font-size:1.08rem;color:#374151;line-height:1.7}
+.lead b{color:var(--ink)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+.frame{border:1px solid var(--line);overflow:hidden;box-shadow:0 14px 34px -16px rgba(16,10,10,.35);background:#fff}
+.bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--ivory-2);border-bottom:1px solid var(--line)}
+.bar i{width:9px;height:9px;border-radius:50%;background:var(--silver)}
+.bar span{font-size:.66rem;color:var(--muted);margin-left:8px}
+.shot{height:240px;overflow:hidden;background:var(--ivory-2);display:grid;place-items:center;color:var(--muted);font-size:.85rem}
+.shot img{width:100%;height:100%;object-fit:cover}
+.cap{text-align:center;font-size:.76rem;font-weight:700;padding:10px;letter-spacing:.14em;text-transform:uppercase}
+.cap.old{color:var(--muted)}.cap.new{color:var(--red-deep)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px 30px}
+.up{display:flex;gap:12px;align-items:flex-start}
+.up svg{width:22px;height:22px;color:var(--red);flex:none;margin-top:2px}
+.up b{display:block;color:var(--ink);font-size:1rem;font-weight:700}
+.up p{font-size:.92rem;color:var(--muted)}
+.split{display:grid;grid-template-columns:1.25fr 1fr;gap:32px}
+.incl{list-style:none}
+.incl li{font-size:.94rem;padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.incl li::before{content:"◆";color:var(--red);font-weight:800;flex:none}
+.invest{background:#fff;border:1px solid var(--line);padding:26px;box-shadow:0 18px 44px -22px rgba(16,10,10,.3)}
+.invest .price{font-family:'Playfair Display';font-size:2.7rem;color:var(--ink);font-weight:700;line-height:1}
+.invest .price small{font-size:.88rem;color:var(--muted);font-weight:400;font-family:'Jost';display:block;margin-top:6px}
+.invest .note{font-size:.88rem;color:var(--muted);margin-top:14px}
+.invest .note b{color:var(--ink)}
+.timeline{display:flex;gap:10px;margin-top:14px}
+.tl{flex:1;background:var(--ivory-2);border:1px solid var(--line);padding:14px;text-align:center}
+.tl b{display:block;font-family:'Playfair Display';color:var(--ink);font-size:1.3rem}
+.tl span{font-size:.72rem;color:var(--muted);letter-spacing:.06em}
+
+/* GAIN — concrete before/after */
+.gain{background:var(--ivory-2);padding:54px 0}
+.gain h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px}
+.gainlist{display:grid;gap:14px;margin-top:24px}
+.gainrow{background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:auto 1fr 1fr;gap:0;overflow:hidden}
+.gainrow .lbl{background:var(--ink);color:#fff;padding:18px 16px;font-family:'Playfair Display';font-size:1rem;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:center;letter-spacing:.04em;min-width:170px}
+.gainrow .now,.gainrow .after{padding:16px 18px;font-size:.92rem}
+.gainrow .now{color:var(--muted);border-right:1px solid var(--line);background:#fbfbfc}
+.gainrow .now b{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:6px;font-weight:700}
+.gainrow .after{color:var(--ink)}
+.gainrow .after b{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-ok);margin-bottom:6px;font-weight:700}
+@media(max-width:680px){.gainrow{grid-template-columns:1fr}.gainrow .lbl{padding:12px}.gainrow .now{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* ATLAS card */
+.atlas{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.acard{padding:30px;text-align:center;border:1px solid var(--line);background:#fff}
+.acard.bad{background:var(--ink);color:#fff;border-color:var(--ink)}
+.acard.bad h3{color:#fff}.acard.bad .score{color:#ff6e6e}
+.acard h3{font-family:'Jost';font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:14px}
+.acard.bad h3{color:rgba(255,255,255,.55)}
+.score{font-family:'Playfair Display';font-weight:700;font-size:3.5rem;line-height:1;color:var(--red-deep)}
+.acard.good .score{color:var(--green-ok)}
+.tier{display:inline-block;padding:.35rem 1.1rem;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:14px;border:1px solid currentColor}
+.acard ul{list-style:none;text-align:left;margin-top:18px;font-size:.85rem}
+.acard li{padding:5px 0;display:flex;gap:8px}
+.acard.bad li{color:rgba(255,255,255,.75)}
+.acard li b{flex:none}
+.acard.bad li b{color:#ff6e6e}.acard.good li b{color:var(--green-ok)}
+@media(max-width:680px){.atlas{grid-template-columns:1fr}}
+
+/* REV */
+.rev{background:var(--ink);color:#fff}
+.rev h2{color:#fff}
+.rev .sec-t{color:#e0e0e2}.rev .sec-t::before{background:var(--silver)}
+.revstats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 30px}
+.revstat{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);padding:20px;text-align:center}
+.revstat b{font-family:'Playfair Display';font-size:1.9rem;color:#fff;display:block;line-height:1}
+.revstat span{font-size:.8rem;color:rgba(255,255,255,.55);display:block;margin-top:8px}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.rev-calc{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);padding:28px}
+.rev-calc h3{color:#fff;font-size:1.2rem;margin-bottom:4px}
+.rev-calc .note{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:16px}
+.rev-rows{list-style:none}
+.rev-rows li{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.15);font-size:.95rem;color:rgba(255,255,255,.85)}
+.rev-rows li b{color:#fff;font-weight:700}
+.rev-rows li.total{border-bottom:0;border-top:2px solid var(--red);margin-top:8px;padding-top:14px}
+.rev-rows li.total b{color:var(--silver);font-size:1.3rem;font-family:'Playfair Display'}
+.rev-year{margin-top:14px;background:var(--red);color:#fff;padding:16px;text-align:center;font-family:'Playfair Display';font-size:1.3rem;font-weight:700}
+.footnote{font-size:.74rem;color:rgba(255,255,255,.45);margin-top:22px;line-height:1.6}
+.footnote a{color:var(--silver)}
+
+/* SIGN */
+.sign{background:var(--ink-2);color:#fff;padding:56px 0;border-top:4px solid var(--red)}
+.sign h2{color:#fff;font-size:clamp(1.6rem,4vw,2.3rem)}
+.sign>.wrap>p{color:rgba(255,255,255,.78);margin:8px 0 26px;max-width:560px}
+.signcard{background:#fff;padding:32px;box-shadow:0 30px 70px -28px rgba(0,0,0,.6);max-width:560px;color:var(--text)}
+.signcard .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);margin-bottom:.4rem}
+.fld input{width:100%;padding:.85rem 1rem;border:1.5px solid var(--line);font:inherit;font-size:.95rem;background:var(--ivory);color:var(--text)}
+.fld input:focus{outline:0;border-color:var(--red);box-shadow:0 0 0 4px rgba(204,0,0,.13);background:#fff}
+.sig-input{font-family:'Playfair Display',cursive!important;font-size:1.5rem!important;color:var(--ink)!important}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--ink);margin:6px 0 18px;cursor:pointer;line-height:1.55}
+.agree input{margin-top:3px;width:18px;height:18px;accent-color:var(--red);flex:none}
+.agree b{color:var(--ink)}
+.btn-sign{width:100%;background:var(--red);color:#fff;border:0;font:inherit;font-weight:700;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;padding:1.1rem;cursor:pointer;transition:transform .2s,background .2s;display:flex;align-items:center;justify-content:center;gap:.6rem}
+.btn-sign:hover{background:var(--red-deep);transform:translateY(-2px)}
+.btn-sign:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.btn-sign svg{width:18px;height:18px}
+.fineprint{text-align:center;font-size:.76rem;color:var(--muted);margin-top:14px}
+.err{color:var(--red);font-size:.85rem;margin-top:10px;text-align:center;display:none}
+.err.show{display:block}
+.success{display:none;text-align:center;padding:14px 0}
+.success.show{display:block}
+.success .ok{width:72px;height:72px;background:var(--green-ok);display:grid;place-items:center;margin:0 auto 14px}
+.success .ok svg{width:38px;height:38px;color:#fff}
+.success h3{font-size:1.5rem;margin-bottom:6px;color:var(--ink)}
+.success p{color:var(--muted);font-size:.95rem}
+.success .sigline{font-family:'Playfair Display';font-size:1.6rem;color:var(--ink);border-bottom:2px solid var(--line);display:inline-block;padding:6px 30px 2px;margin:14px 0 4px}
+.foot{padding:24px 0;text-align:center;font-size:.8rem;color:var(--muted)}
+@media(max-width:680px){.compare,.grid2,.split,.signcard .row,.rev-grid{grid-template-columns:1fr}.revstats{grid-template-columns:1fr}.timeline{flex-direction:column}.shot{height:200px}}
+</style></head><body>
+
+<div class="topnav"><div class="wrap">
+  <a class="brand" href="#top"><img src="brand/platinum-logo.png" alt="Platinum Flooring logo"></a>
+  <a class="sign-link" href="#sign">Review &amp; Sign →</a>
+</div></div>
+
+<section class="hero" id="top"><div class="wrap">
+  <div class="tag">Website Redesign Proposal</div>
+  <h1>Platinum Flooring <em>2.0</em></h1>
+  <p>A modern, mobile-first website rebuild that keeps your brand — your logo, your red &amp; black, "The Platinum Experience" — and turns more visitors into estimate calls. Plus your first batch of SEO, fully optimized for Severn, Glen Burnie and Greater Baltimore.</p>
+  <div class="meta">
+    <div><b>Platinum Flooring, LLC</b>Prepared for</div>
+    <div><b>Leone Moretti</b>Prepared by</div>
+    <div><b>$999 total</b>Website 2.0 + first SEO batch</div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-t">The opportunity</div>
+  <p class="lead">The Platinum Flooring website works — but in 2026, customers judge a contractor in <b>seconds</b> on their phone. <b>Platinum Flooring 2.0</b> keeps everything they already recognize — your logo, your red &amp; black, your tagline, "The Platinum Experience," and your 30 years of trust — and rebuilds it into a fast, modern site designed to <b>turn visitors into estimate calls</b> and <b>show up higher on Google</b>.</p>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="sec-t">Current vs. Proposed 2.0</div>
+  <div class="compare">
+    <div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>platinumflooringmd.com</span></div><div class="shot">Current Site Screenshot</div></div><div class="cap old">Current Site</div></div>
+    <div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>platinumflooringmd.com</span></div><div class="shot"><img src="brand/platinum-carpet-hero.png" alt="Platinum 2.0 preview"></div></div><div class="cap new">Proposed 2.0</div></div>
+  </div>
+  <p style="text-align:center;margin-top:18px;font-size:.88rem;color:var(--muted)">Live preview: <a href="index.html" style="color:var(--red-deep);font-weight:600">view the full 2.0 design →</a></p>
+</div></section>
+
+<section class="gain" id="gain"><div class="wrap">
+  <div class="sec-t">What you gain</div>
+  <h2>Concrete fixes — measurable from day one.</h2>
+  <p style="color:var(--muted);margin-top:.6rem;max-width:640px">An independent audit (Atlas Index™) flagged exactly what's costing the current site calls. Every line below is fixed in the 2.0.</p>
+  <div class="gainlist">
+    <div class="gainrow"><div class="lbl">Phone Number</div>
+      <div class="now"><b>Today</b>Visible phone is missing a digit (<code>1443323189</code>) — Google sees a mismatch with your schema (<code>+14433231895</code>). Costs you map calls.</div>
+      <div class="after"><b>2.0 Fix</b>One correct number everywhere, formatted for click-to-call. Calls go straight from Google to your phone in one tap.</div></div>
+    <div class="gainrow"><div class="lbl">Mobile Speed</div>
+      <div class="now"><b>Today</b>Mobile page loads in <b>6.6 seconds</b>. Industry data: every extra second past 3s loses ~10% of visitors.</div>
+      <div class="after"><b>2.0 Fix</b>Mobile-first build with image preloading. Targets under 2 seconds — visitors actually stay long enough to call.</div></div>
+    <div class="gainrow"><div class="lbl">Social Sharing</div>
+      <div class="now"><b>Today</b>Share the link on Facebook or iMessage — it shows a blank box, no preview. Free word-of-mouth wasted.</div>
+      <div class="after"><b>2.0 Fix</b>Rich preview card with your logo, the hero photo, and "Why like your floors, when you can love them?" on every share.</div></div>
+    <div class="gainrow"><div class="lbl">Google Rich Results</div>
+      <div class="now"><b>Today</b>No FAQ, no review markup, no business schema. Plain text result in search.</div>
+      <div class="after"><b>2.0 Fix</b>FAQ expanders, your 5-star Google reviews surfaced as stars, and full LocalBusiness schema for Google Maps ranking.</div></div>
+    <div class="gainrow"><div class="lbl">Trust Signals</div>
+      <div class="now"><b>Today</b>"Licensed &amp; insured," "Platinum Warranty" — barely mentioned. Privacy/terms missing.</div>
+      <div class="after"><b>2.0 Fix</b>Warranty badge in the hero, Platinum Experience section front-and-center, privacy/terms pages live (required by most ad platforms).</div></div>
+    <div class="gainrow"><div class="lbl">AI Search</div>
+      <div class="now"><b>Today</b>Invisible to ChatGPT, Claude, Perplexity — they can't read or recommend the site. That traffic is growing fast.</div>
+      <div class="after"><b>2.0 Fix</b><code>llms.txt</code> + structured content makes Platinum Flooring discoverable when people ask AI assistants for a flooring contractor near Severn.</div></div>
+    <div class="gainrow"><div class="lbl">Real Reviews</div>
+      <div class="now"><b>Today</b>The 3 great Google reviews (Marissa, Erica, Jennifer) are buried — most visitors never see them.</div>
+      <div class="after"><b>2.0 Fix</b>Each review featured verbatim with a "See all on Google" link straight to the Maps listing.</div></div>
+  </div>
+  <div style="margin-top:36px;background:#fff;border:1px solid var(--line);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center">
+    <img src="brand/platinum-carpet-vertical.png" alt="Father and child on plush carpet — Platinum Flooring brand photo" style="width:220px;height:auto" width="480" height="647">
+    <div>
+      <div class="sec-t" style="margin-bottom:10px">Why this isn't just a redesign</div>
+      <p style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);line-height:1.5">The brand photo on Platinum's site today — the dad and his son on the carpet — already says everything Platinum stands for: family, trust, comfort underfoot. The 2.0 keeps it. Then builds the rest of the site to live up to it.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="atlas-section"><div class="wrap">
+  <div class="sec-t">Atlas Index™ — Independent SEO Audit</div>
+  <h2 style="font-size:clamp(1.7rem,4vw,2.4rem)">From Bronze to Platinum on Google</h2>
+  <p class="lead" style="margin-top:.6rem">Our Atlas Index™ engine scored the live site on June 9, 2026. The projected score below assumes deployment of the 2.0 build plus the first SEO batch on your own domain.</p>
+  <div class="atlas">
+    <div class="acard bad">
+      <h3>Current Website</h3>
+      <div class="score">58.7</div>
+      <div class="tier" style="color:#d49a6a;border-color:#b07039">Bronze · Grade D</div>
+      <ul>
+        <li><b>✗</b> 6.6-second mobile load</li>
+        <li><b>✗</b> 5 H1 tags (Google likes 1)</li>
+        <li><b>✗</b> 0% of images have alt text</li>
+        <li><b>✗</b> No FAQ schema, no rich results</li>
+        <li><b>✗</b> Phone NAP mismatch with Google</li>
+      </ul>
+    </div>
+    <div class="acard good">
+      <h3>Platinum 2.0 (projected)</h3>
+      <div class="score">90+</div>
+      <div class="tier" style="color:var(--green-ok);border-color:var(--green-ok)">Platinum · projected</div>
+      <ul>
+        <li><b>✓</b> Sub-2-second mobile load</li>
+        <li><b>✓</b> Clean single-H1 structure</li>
+        <li><b>✓</b> Descriptive alt text everywhere</li>
+        <li><b>✓</b> FAQ + Review + Business schema</li>
+        <li><b>✓</b> Click-to-call + map data correct</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:.74rem;color:var(--muted);margin-top:16px;line-height:1.6">Atlas Index™ scoring methodology is proprietary &amp; confidential. Projected score assumes deployment on modern edge hosting; actual post-launch score will be re-audited after live deployment.</p>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="split">
+    <div>
+      <div class="sec-t">What's included</div>
+      <ul class="incl">
+        <li>Full custom site: Hero, Services, The Platinum Experience, Refinishing showcase, Process, Reviews, FAQ, Service Areas, Estimate &amp; Footer</li>
+        <li>Six service sections with verified flooring photography</li>
+        <li>Refreshed brand kit using your existing logo (favicon, social, OG card)</li>
+        <li>Lead-capture estimate form, click-to-call on every screen</li>
+        <li><b>First batch of on-page SEO</b> + Google structured data + AI-search readiness</li>
+        <li>Interactive before/after refinishing slider — show off your work in 1 click</li>
+        <li>Privacy &amp; Terms pages, sitemap, robots.txt, web manifest</li>
+        <li>Mobile, tablet &amp; desktop tested · launch support</li>
+      </ul>
+    </div>
+    <div>
+      <div class="invest">
+        <div class="sec-t">Your investment</div>
+        <div class="price">$999<small>Total project — website + first SEO batch</small></div>
+        <div class="note">Complete website build <b>plus your first batch of on-page SEO</b>, fully optimized for Google &amp; local search across Severn, Glen Burnie, Hanover and Greater Baltimore. No hidden fees, no monthly lock-in.</div>
+      </div>
+      <div class="sec-t" style="margin-top:22px">Timeline</div>
+      <div class="timeline">
+        <div class="tl"><b>1–2</b><span>days · design</span></div>
+        <div class="tl"><b>3–5</b><span>days · build</span></div>
+        <div class="tl"><b>1</b><span>day · launch</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec rev" id="revenue">
+  <div class="wrap">
+    <div class="sec-t">What this can mean for the business</div>
+    <h2 style="font-size:clamp(1.7rem,4vw,2.4rem)">More visibility → more estimate calls</h2>
+    <p class="lead" style="color:rgba(255,255,255,.82)">A higher Atlas score isn't vanity — it's about getting Platinum Flooring in front of the homeowners already searching <em>"carpet installation Severn MD"</em> or <em>"hardwood refinishing Glen Burnie."</em> On Google, the <b style="color:#fff">top 3 results capture about 68% of all clicks</b>, and sites below the top 5 get under 5%. Climbing those rankings is where the calls are.</p>
+    <div class="revstats">
+      <div class="revstat"><b>~68%</b><span>of clicks go to the top 3 Google results</span></div>
+      <div class="revstat"><b>&lt;5%</b><span>of clicks for sites below the top 5</span></div>
+      <div class="revstat"><b>58 → 90+</b><span>your Atlas score, Bronze → Platinum</span></div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-calc">
+        <h3>What a few extra leads is worth</h3>
+        <p class="note">Illustrative — plug in your own numbers. Not a guarantee of results.</p>
+        <ul class="rev-rows">
+          <li><span>Extra estimate calls / month</span><b>+5</b></li>
+          <li><span>Jobs won (≈40% close rate)</span><b>2</b></li>
+          <li><span>Average flooring project value</span><b>$3,500</b></li>
+          <li class="total"><span>Potential new revenue</span><b>~$7,000/mo</b></li>
+        </ul>
+        <div class="rev-year">≈ $84,000 / year in new work</div>
+      </div>
+      <div class="rev-calc">
+        <h3>The downside of waiting</h3>
+        <p class="note">What the current site quietly costs every month</p>
+        <ul class="rev-rows">
+          <li><span>Visitors lost to 6.6s mobile load</span><b>~40%</b></li>
+          <li><span>Calls lost to NAP phone mismatch</span><b>unknown</b></li>
+          <li><span>Free shares wasted (blank previews)</span><b>every one</b></li>
+          <li class="total"><span>Each month delayed costs</span><b>≈ $7k+</b></li>
+        </ul>
+        <div class="rev-year" style="background:var(--red-deep)">Time is the real cost.</div>
+      </div>
+    </div>
+    <p class="footnote">Click-through-rate by Google ranking position: <a href="https://firstpagesage.com/reports/google-click-through-rates-ctrs-by-ranking-position/">First Page Sage</a> &amp; <a href="https://backlinko.com/google-ctr-stats">Backlinko</a> (2025–2026). Revenue figures above are an <b>illustrative scenario</b> using adjustable assumptions (lead volume, close rate, project value) — actual results vary and are not guaranteed.</p>
+  </div>
+</section>
+
+<section class="sign" id="sign"><div class="wrap">
+  <h2>Approve &amp; sign</h2>
+  <p>Ready to move forward? Type your name to sign, and we'll start on your new website right away.</p>
+  <div class="signcard">
+    <form id="signForm">
+      <div class="row">
+        <div class="fld"><label for="fn">Your full name (signature)</label><input id="fn" class="sig-input" type="text" required placeholder="Your name" autocomplete="name"></div>
+        <div class="fld"><label for="ti">Title (optional)</label><input id="ti" type="text" placeholder="Owner"></div>
+      </div>
+      <div class="fld"><label for="em">Email (optional)</label><input id="em" type="email" placeholder="you@email.com" autocomplete="email"></div>
+      <label class="agree"><input type="checkbox" id="ag" required><span>I, the signer, approve the <b>Platinum Flooring Website 2.0</b> proposal at a total price of <b>$999</b> (website rebuild + first batch of on-page SEO included).</span></label>
+      <button type="submit" class="btn-sign" id="btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+        Approve &amp; Sign
+      </button>
+      <div class="err" id="err">Something went wrong — please try again, or call (443) 323-1895.</div>
+      <p class="fineprint">Secure digital signature · timestamped on submission.</p>
+    </form>
+    <div class="success" id="success">
+      <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>Proposal signed — thank you!</h3>
+      <div class="sigline" id="sigName"></div>
+      <p id="sigDate"></p>
+      <p style="margin-top:10px">We've received your approval and will be in touch shortly to begin. Questions? Reach out anytime.</p>
+    </div>
+  </div>
+</div></section>
+
+<div class="foot">© 2026 · Prepared by <b>Leone Moretti</b> · <a href="mailto:eternalinfinityai@gmail.com" style="color:var(--red-deep);font-weight:600">eternalinfinityai@gmail.com</a></div>
+
+<script>
+const SUPA_URL='https://rmfsmrlddbjyyxjlqloy.supabase.co';
+const SUPA_KEY='sb_publishable_l9oOgzkgvzuonQuYmoeR0w_glCZ7BRO';
+const form=document.getElementById('signForm');
+const btn=document.getElementById('btn');
+const err=document.getElementById('err');
+form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  err.classList.remove('show');
+  const full_name=document.getElementById('fn').value.trim();
+  const title=document.getElementById('ti').value.trim();
+  const email=document.getElementById('em').value.trim();
+  if(!full_name||!document.getElementById('ag').checked){return;}
+  btn.disabled=true; btn.textContent='Signing…';
+  try{
+    const res=await fetch(SUPA_URL+'/rest/v1/proposal_signatures',{
+      method:'POST',
+      headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+      body:JSON.stringify({full_name:full_name,title:title||null,email:email||null,proposal:'Platinum Flooring Website 2.0',amount:999,agreed:true,user_agent:navigator.userAgent})
+    });
+    if(!res.ok) throw new Error('bad status '+res.status);
+    const d=new Date();
+    const dateStr=d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+    document.getElementById('sigName').textContent=full_name;
+    document.getElementById('sigDate').textContent='Signed on '+dateStr;
+    form.style.display='none';
+    document.getElementById('success').classList.add('show');
+    document.getElementById('success').scrollIntoView({behavior:'smooth',block:'center'});
+  }catch(ex){
+    btn.disabled=false; btn.textContent='Approve & Sign';
+    err.classList.add('show');
+  }
+});
+</script>
+</body></html>
