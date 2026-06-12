@@ -90,10 +90,16 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);line-height:1.12;
 .acard.good .score{color:var(--green-ok)}
 .tier{display:inline-block;padding:.35rem 1.1rem;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:14px;border:1px solid currentColor}
 .acard ul{list-style:none;text-align:left;margin-top:18px;font-size:.85rem}
-.acard li{padding:5px 0;display:flex;gap:8px}
+.acard li{padding:5px 0;display:flex;gap:8px;align-items:center}
 .acard.bad li{color:rgba(255,255,255,.75)}
 .acard li b{flex:none}
 .acard.bad li b{color:#ff6e6e}.acard.good li b{color:var(--green-ok)}
+.redact{display:inline-block;height:.95em;flex:1;max-width:230px;border-radius:3px;background:repeating-linear-gradient(135deg,currentColor 0,currentColor 6px,transparent 6px,transparent 9px);opacity:.28;position:relative;top:1px}
+.acard.bad .redact{color:#fff}
+.acard.good .redact{color:var(--ink)}
+.locknote{font-size:.74rem;margin-top:14px;display:flex;align-items:center;gap:7px;justify-content:center}
+.acard.bad .locknote{color:rgba(255,255,255,.5)}
+.acard.good .locknote{color:var(--muted)}
 @media(max-width:680px){.atlas{grid-template-columns:1fr}}
 
 /* REV */
@@ -185,26 +191,26 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);line-height:1.12;
   <p style="color:var(--muted);margin-top:.6rem;max-width:640px">An independent audit (Atlas Index™) flagged exactly what's costing the current site calls. Every line below is fixed in the 2.0.</p>
   <div class="gainlist">
     <div class="gainrow"><div class="lbl">Phone Number</div>
-      <div class="now"><b>Today</b>Visible phone is missing a digit (<code>1443323189</code>) — Google sees a mismatch with your schema (<code>+14433231895</code>). Costs you map calls.</div>
-      <div class="after"><b>2.0 Fix</b>One correct number everywhere, formatted for click-to-call. Calls go straight from Google to your phone in one tap.</div></div>
+      <div class="now"><b>Today</b>A critical error in how your phone number reaches Google is silently costing you calls. Most owners never spot it — we found it in minutes.</div>
+      <div class="after"><b>2.0 Fix</b><span class="redact" style="max-width:100%;color:var(--ink)"></span><span class="redact" style="max-width:70%;color:var(--ink)"></span><span style="display:block;font-size:.78rem;color:var(--muted);margin-top:6px">🔒 Fix details unlocked on signing</span></div></div>
     <div class="gainrow"><div class="lbl">Mobile Speed</div>
       <div class="now"><b>Today</b>Mobile page loads in <b>6.6 seconds</b>. Industry data: every extra second past 3s loses ~10% of visitors.</div>
-      <div class="after"><b>2.0 Fix</b>Mobile-first build with image preloading. Targets under 2 seconds — visitors actually stay long enough to call.</div></div>
+      <div class="after"><b>2.0 Fix</b>Complete mobile-first rebuild targeting under 2 seconds — visitors actually stay long enough to call.</div></div>
     <div class="gainrow"><div class="lbl">Social Sharing</div>
-      <div class="now"><b>Today</b>Share the link on Facebook or iMessage — it shows a blank box, no preview. Free word-of-mouth wasted.</div>
-      <div class="after"><b>2.0 Fix</b>Rich preview card with your logo, the hero photo, and "Why like your floors, when you can love them?" on every share.</div></div>
+      <div class="now"><b>Today</b>Share the link on Facebook or iMessage — it shows a blank box, no preview. Try it yourself. Free word-of-mouth wasted.</div>
+      <div class="after"><b>2.0 Fix</b><span class="redact" style="max-width:100%;color:var(--ink)"></span><span class="redact" style="max-width:60%;color:var(--ink)"></span><span style="display:block;font-size:.78rem;color:var(--muted);margin-top:6px">🔒 Fix details unlocked on signing</span></div></div>
     <div class="gainrow"><div class="lbl">Google Rich Results</div>
-      <div class="now"><b>Today</b>No FAQ, no review markup, no business schema. Plain text result in search.</div>
-      <div class="after"><b>2.0 Fix</b>FAQ expanders, your 5-star Google reviews surfaced as stars, and full LocalBusiness schema for Google Maps ranking.</div></div>
+      <div class="now"><b>Today</b>Your Google result is plain text, while top competitors show stars, FAQs and map info. Google offers this real estate free — the site just doesn't claim it.</div>
+      <div class="after"><b>2.0 Fix</b><span class="redact" style="max-width:100%;color:var(--ink)"></span><span class="redact" style="max-width:80%;color:var(--ink)"></span><span style="display:block;font-size:.78rem;color:var(--muted);margin-top:6px">🔒 Fix details unlocked on signing</span></div></div>
     <div class="gainrow"><div class="lbl">Trust Signals</div>
-      <div class="now"><b>Today</b>"Licensed &amp; insured," "Platinum Warranty" — barely mentioned. Privacy/terms missing.</div>
-      <div class="after"><b>2.0 Fix</b>Warranty badge in the hero, Platinum Experience section front-and-center, privacy/terms pages live (required by most ad platforms).</div></div>
+      <div class="now"><b>Today</b>Key trust signals homeowners look for before calling a contractor are missing or buried — including ones most ad platforms require.</div>
+      <div class="after"><b>2.0 Fix</b><span class="redact" style="max-width:100%;color:var(--ink)"></span><span class="redact" style="max-width:55%;color:var(--ink)"></span><span style="display:block;font-size:.78rem;color:var(--muted);margin-top:6px">🔒 Fix details unlocked on signing</span></div></div>
     <div class="gainrow"><div class="lbl">AI Search</div>
-      <div class="now"><b>Today</b>Invisible to ChatGPT, Claude, Perplexity — they can't read or recommend the site. That traffic is growing fast.</div>
-      <div class="after"><b>2.0 Fix</b><code>llms.txt</code> + structured content makes Platinum Flooring discoverable when people ask AI assistants for a flooring contractor near Severn.</div></div>
+      <div class="now"><b>Today</b>Invisible to ChatGPT, Claude and Perplexity — they can't read or recommend the site. That traffic is growing fast.</div>
+      <div class="after"><b>2.0 Fix</b><span class="redact" style="max-width:100%;color:var(--ink)"></span><span class="redact" style="max-width:65%;color:var(--ink)"></span><span style="display:block;font-size:.78rem;color:var(--muted);margin-top:6px">🔒 Fix details unlocked on signing</span></div></div>
     <div class="gainrow"><div class="lbl">Real Reviews</div>
-      <div class="now"><b>Today</b>The 3 great Google reviews (Marissa, Erica, Jennifer) are buried — most visitors never see them.</div>
-      <div class="after"><b>2.0 Fix</b>Each review featured verbatim with a "See all on Google" link straight to the Maps listing.</div></div>
+      <div class="now"><b>Today</b>Your 3 five-star Google reviews (Marissa, Erica, Jennifer) are buried — most visitors never see them.</div>
+      <div class="after"><b>2.0 Fix</b><span class="redact" style="max-width:100%;color:var(--ink)"></span><span class="redact" style="max-width:50%;color:var(--ink)"></span><span style="display:block;font-size:.78rem;color:var(--muted);margin-top:6px">🔒 Fix details unlocked on signing</span></div></div>
   </div>
   <div style="margin-top:36px;background:#fff;border:1px solid var(--line);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center">
     <img src="brand/platinum-carpet-vertical.png" alt="Father and child on plush carpet — Platinum Flooring brand photo" style="width:220px;height:auto" width="480" height="647">
@@ -226,11 +232,12 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);line-height:1.12;
       <div class="tier" style="color:#d49a6a;border-color:#b07039">Bronze · Grade D</div>
       <ul>
         <li><b>✗</b> 6.6-second mobile load</li>
-        <li><b>✗</b> 5 H1 tags (Google likes 1)</li>
-        <li><b>✗</b> 0% of images have alt text</li>
-        <li><b>✗</b> No FAQ schema, no rich results</li>
-        <li><b>✗</b> Phone NAP mismatch with Google</li>
+        <li><b>✗</b> <span class="redact" aria-label="redacted finding"></span></li>
+        <li><b>✗</b> <span class="redact" aria-label="redacted finding"></span></li>
+        <li><b>✗</b> <span class="redact" aria-label="redacted finding"></span></li>
+        <li><b>✗</b> <span class="redact" aria-label="redacted finding"></span></li>
       </ul>
+      <div class="locknote">🔒 23 specific issues found — full findings shared on project start</div>
     </div>
     <div class="acard good">
       <h3>Platinum 2.0 (projected)</h3>
@@ -238,11 +245,12 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);line-height:1.12;
       <div class="tier" style="color:var(--green-ok);border-color:var(--green-ok)">Platinum · projected</div>
       <ul>
         <li><b>✓</b> Sub-2-second mobile load</li>
-        <li><b>✓</b> Clean single-H1 structure</li>
-        <li><b>✓</b> Descriptive alt text everywhere</li>
-        <li><b>✓</b> FAQ + Review + Business schema</li>
-        <li><b>✓</b> Click-to-call + map data correct</li>
+        <li><b>✓</b> <span class="redact" aria-label="redacted fix"></span></li>
+        <li><b>✓</b> <span class="redact" aria-label="redacted fix"></span></li>
+        <li><b>✓</b> <span class="redact" aria-label="redacted fix"></span></li>
+        <li><b>✓</b> <span class="redact" aria-label="redacted fix"></span></li>
       </ul>
+      <div class="locknote">🔒 Every issue resolved in the 2.0 build</div>
     </div>
   </div>
   <p style="font-size:.74rem;color:var(--muted);margin-top:16px;line-height:1.6">Atlas Index™ scoring methodology is proprietary &amp; confidential. Projected score assumes deployment on modern edge hosting; actual post-launch score will be re-audited after live deployment.</p>
@@ -257,9 +265,9 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);line-height:1.12;
         <li>Six service sections with verified flooring photography</li>
         <li>Refreshed brand kit using your existing logo (favicon, social, OG card)</li>
         <li>Lead-capture estimate form, click-to-call on every screen</li>
-        <li><b>First batch of on-page SEO</b> + Google structured data + AI-search readiness</li>
+        <li><b>First batch of on-page SEO</b> — full search-engine + AI-search optimization (methodology confidential)</li>
         <li>Interactive before/after refinishing slider — show off your work in 1 click</li>
-        <li>Privacy &amp; Terms pages, sitemap, robots.txt, web manifest</li>
+        <li>All legal &amp; compliance pages ad platforms require</li>
         <li>Mobile, tablet &amp; desktop tested · launch support</li>
       </ul>
     </div>
